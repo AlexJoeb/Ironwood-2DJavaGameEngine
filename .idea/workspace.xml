@@ -4,38 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db68af2d-398b-4f0c-ac44-c1fb8585f67e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/conquest/codebase/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/conquest/codebase/animation/Animation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/conquest/codebase/animation/AnimationManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/conquest/codebase/animation/AnimationType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/conquest/codebase/animation/AnimationTypeConstants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/conquest/codebase/animation/Direction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/conquest/codebase/managers/GameLoop.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/conquest/codebase/managers/InputManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/conquest/codebase/managers/WindowManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/conquest/codebase/objects/player/Player.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/conquest/codebase/objects/sprites/Sprite.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/conquest/codebase/objects/sprites/SpriteSheets.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/conquest/codebase/world/Chunk.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/conquest/codebase/world/Coordinates.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/conquest/codebase/world/Tile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/conquest/codebase/world/TileType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/conquest/codebase/world/World.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sprites/characters/char1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sprites/characters/char2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sprites/characters/char3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sprites/characters/char4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sprites/characters/char5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sprites/characters/char6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sprites/characters/char7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sprites/characters/char8.png" afterDir="false" />
+    <list default="true" id="db68af2d-398b-4f0c-ac44-c1fb8585f67e" name="Changes" comment="Working on fixing character animation.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/conquest/codebase/managers/GameLoop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/conquest/codebase/managers/GameLoop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/conquest/codebase/objects/player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/conquest/codebase/objects/player/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,8 +71,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1681595398685</updated>
-      <workItem from="1681595399895" duration="14130000" />
+      <workItem from="1681595399895" duration="18259000" />
     </task>
+    <task id="LOCAL-00001" summary="Working on fixing character animation.">
+      <created>1681704362579</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1681704362579</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -116,5 +96,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Working on fixing character animation." />
+    <option name="LAST_COMMIT_MESSAGE" value="Working on fixing character animation." />
   </component>
 </project>

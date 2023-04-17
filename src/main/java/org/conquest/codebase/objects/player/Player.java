@@ -4,6 +4,7 @@ import org.conquest.codebase.animation.Animation;
 import org.conquest.codebase.animation.AnimationManager;
 import org.conquest.codebase.animation.AnimationType;
 import org.conquest.codebase.animation.Direction;
+import org.conquest.codebase.managers.GameLoop;
 import org.conquest.codebase.managers.WindowManager;
 import org.conquest.codebase.objects.sprites.Sprite;
 import org.conquest.codebase.world.Tile;
@@ -14,7 +15,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Player {
-    public static final int MOVE_SPEED = 2;
 
     private int worldX = 0;
     private int worldY = 0;
@@ -24,6 +24,9 @@ public class Player {
     private List<Animation> animations = new ArrayList<>();
     private Direction lastDirectionFaced = Direction.S;
     private int animationFrame = 0;
+    private double timeSinceLastFrameUpdate = 0;
+    private static final double FRAME_DURATION = 5;
+    public static final int MOVE_SPEED = 2;
 
     private Player(Sprite sprite) {
         this.sprite = sprite;
@@ -148,17 +151,17 @@ public class Player {
         return worldY;
     }
 
-    public void move(Direction direction, double deltaTime) {
-        double multiplier = -((MOVE_SPEED / 30.0) * deltaTime);
+    public void move(Direction direction) {
         switch (direction) {
-            case S -> worldY += multiplier;
-            case N -> worldY -= multiplier;
-            case E -> worldX += multiplier;
-            case W -> worldX -= multiplier;
+            case S -> worldY += MOVE_SPEED;
+            case N -> worldY -= MOVE_SPEED;
+            case E -> worldX += MOVE_SPEED;
+            case W -> worldX -= MOVE_SPEED;
         }
     }
 
-    public void updateAnimation(double currentTime, double deltaTime) {
+    public void updateAnimation(double delta) {
+        double currentTime = System.nanoTime();
         if (!isAnimating()) {
             animationFrame = 0;
             return;
@@ -167,11 +170,16 @@ public class Player {
         List<Animation> walkingAnimations = getWalkingAnimations();
         if (!walkingAnimations.isEmpty()) {
             walkingAnimations.forEach(a -> {
-                move(a.getDirection(), deltaTime);
+                move(a.getDirection());
             });
         }
 
-        if (deltaTime >= MOVE_SPEED) {
+        timeSinceLastFrameUpdate += delta;
+
+        if(timeSinceLastFrameUpdate >= FRAME_DURATION) {
+            System.out.println("Time since last frame update: " + timeSinceLastFrameUpdate);
+            System.out.println("Frame duration: " + FRAME_DURATION);
+            timeSinceLastFrameUpdate = 0;
             animationFrame++;
             if (animationFrame >= getCurrentAnimation().getFrames().length) {
                 if (getCurrentAnimation().getType() != AnimationType.WALKING) {
